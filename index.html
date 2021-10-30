@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- boxicons -->
+        <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+        <!-- tailwindcss -->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <!-- alpine -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- style -->
+        <link rel="stylesheet" href="./assets/style.css" />
+        <!-- script -->
+        <script src="./assets/script.js"></script>
+
+        <title>Prospero Property</title>
+    </head>
+    <body>
+        <header class="w-full bg-white shadow fixed z-50" x-data="{ open: false }">
+            <div class="container">
+                <nav class="flex justify-between py-4 md:py-6">
+                    <img src="assets/logo prospero.svg" alt="logo" class="h-8 md:h-auto" />
+                    <div class="flex items-center">
+                        <button @click="open = ! open">
+                            <i class="bx bx-menu bx-sm block md:hidden"></i>
+                        </button>
+                        <ul class="hidden md:flex gap-8">
+                            <li class="uppercase font-medium"><a href="#about">About</a></li>
+                            <li class="uppercase font-medium"><a href="#services">Our Services</a></li>
+                            <li class="uppercase font-medium"><a href="#mitra">Mitra</a></li>
+                            <li class="uppercase font-medium"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container md:hidden" x-show="open" @click.outside="open = false">
+                <ul class="py-4">
+                    <li class="uppercase text-right font-medium mb-4" @click="open = ! open"><a href="#about">About</a></li>
+                    <li class="uppercase text-right font-medium mb-4" @click="open = ! open"><a href="#services">Our Services</a></li>
+                    <li class="uppercase text-right font-medium mb-4" @click="open = ! open"><a href="#mitra">Mitra</a></li>
+                    <li class="uppercase text-right font-medium" @click="open = ! open"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="py-16 md:py-24">
+            <section class="banner w-full">
+                <img src="assets/banner.png" alt="banner" class="banner-image w-full" />
+            </section>
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="about grid grid-cols-1 md:grid-cols-2">
+                        <div class="about-text mb-8 px-0 md:px-8">
+                            <h1 class="about-title text-4xl md:text-5xl text-center md:text-right leading-normal font-bold mb-8 text-color-red">Way to Find<br /><i>Valuable Propery</i></h1>
+                            <p class="about-content text-lg text-justify md:text-right leading-8 md:pl-12">Dengan mengusung tagline Way to find valuable property Prospero property menyediakan aset properti yang memiliki value dan menjadi tempat yang menguntungkan bagi investor, agen properti atau konsumen yang mencari properti untuk disewakan atau dibisniskan.</p>
+                        </div>
+                        <div class="about-image px-0 md:px-8">
+                            <img src="assets/about.png" alt="" class="w-full md:w-auto"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <img src="assets/diver.png" alt="" class="w-full h-auto" />
+            </section>
+            <section id="services" class="section relative">
+                <div class="container">
+                    <h2 class="section-title pb-12">Our Services</h2>
+                    <div class="services py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+                        <div class="card p-4 bg-white shadow-lg">
+                            <img src="assets/icon-JBP.png" alt="" class="mx-auto pt-10" />
+                            <div class="card-body">
+                                <h3 class="title text-center font-bold pb-4 pt-8">Jual - Beli Properti</h3>
+                                <p class="content text-center pb-8 text-xs">Prospero Property menyediakan aset properti yang memiliki nilai dan menjadi tempat transaksi jual dan beli properti yang menguntungkan.</p>
+                            </div>
+                        </div>
+                        <div class="card p-4 bg-white shadow-lg">
+                            <img src="assets/icon-BP.png" alt="" class="mx-auto pt-10" />
+                            <div class="card-body">
+                                <h3 class="title text-center font-bold pb-4 pt-8">Sewa Properti</h3>
+                                <p class="content text-center pb-8 text-xs">Sedang mencari properti untuk disewakan atau dibisniskan? Temukan kebutuhan properti kamu di Prospero Property. </p>
+                            </div>
+                        </div>
+                        <div class="card p-4 bg-white shadow-lg">
+                            <img src="assets/icon-BP.png" alt="" class="mx-auto pt-10" />
+                            <div class="card-body">
+                                <h3 class="title text-center font-bold pb-4 pt-8">Direktori Properti</h3>
+                                <p class="content text-center pb-8 text-xs">Prospero Property menyediakan daftar proyek developer properti di Indonesia dilengkapi informasi update proyek terbaru beserta ulasan lengkapnya.</p>
+                            </div>
+                        </div>
+                        <div class="card p-4 bg-white shadow-lg">
+                            <img src="assets/icon-BP.png" alt="" class="mx-auto pt-10" />
+                            <div class="card-body">
+                                <h3 class="title text-center font-bold pb-4 pt-8">Berita Properti</h3>
+                                <p class="content text-center pb-8 text-xs">Tambah insight propertimu dengan mengikuti perkembangan berita properti di Prospero Properti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="mitra">
+                <h2 class="section-title pb-8">MITRA KAMI</h2>
+                <div class="mitra">
+                    <div class="container">
+                        <div class="flex items-center justify-center flex-wrap py-16 gap-8">
+                            <img src="assets/EleVee Burgundy 1.png" alt="" />
+                            <img src="assets/APL.png" alt="" />
+                            <img src="assets/Alam Sutera.png" alt="" />
+                            <img src="assets/Sinarmas Land.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-20">
+                <div class="container">
+                    <div class="flex flex-col justify-center items-center gap-16">
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="text-center text-lg">Hubungi Customer Service Kami untuk mendapatkan penjelasan lebih lanjut<br class="hidden md:block">mengenai Listing Properti dan Proyek Developer</p>
+                        <a class="text-sm rounded-full bg-color-red text-white py-2.5 px-6" href="">
+                            Hubungi Customer Service
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer bg-black text-white">
+            <div class="w-full max-w-7xl mx-auto py-16">
+                <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12">
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <img src="assets/logo prospero 2.svg" alt="" class="mb-4 ml-4 md:mx-auto lg:ml-auto">
+                    </div>
+                    <div class="md:col-span-2 lg:col-span-4">
+                        <div class="ml-4 mb-4 md:ml-8">
+                            <p class="md:text-left text-sm font-bold">PT Prospero Property Indonesia</p>
+                            <p class="md:text-left text-sm">APL Tower OT 17T1, Jln. S. Parman </p>
+                            <p class="md:text-left text-sm">Kav.28 Grogol Petamburan - Jakarta Barat 11470</p>
+                            <p class="md:text-left text-sm">Telp. 08158881800 / 08158885600</p>
+                            <p class="md:text-left text-sm">email. office@prosperoproperty.id</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <div class="ml-4">
+                            <p class="text-sm font-bold uppercase mb-4">SITE MAP</p>
+                            <div class="flex mb-4">
+                                <a class="text-sm w-36">About Prospero</a>
+                                <a class="text-sm">Mitra</a>
+                            </div>
+                            <div class="flex mb-4">
+                                <a class="text-sm w-36">Our Services</a>
+                                <a class="text-sm">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 ml-4 flex md:justify-center">
+                        <div class="inline-block">
+                            <p class="text-sm font-bold uppercase mb-4 text-left">Find US</p>
+                            <div class="flex justify-center gap-4">
+                                <a href="https://www.facebook.com/prosperoproperty.id" class="icon">
+                                    <i class="bx-sm bx bxl-facebook" ></i>
+                                </a>
+                                <a href="https://www.instagram.com/prosperoproperty.id/" class="icon">
+                                    <i class="bx-sm bx bxl-instagram" ></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@prosperoproperty.id?lang=en" class="icon">
+                                    <i class="bx-sm bx bxl-tiktok" ></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="border-t border-white py-8">
+                    <p class="text-center text-xs">© 2021 PT Prospero Property Indonesia. Hak cipta dilindungi. Semua materi tidak boleh dipublikasikan atau direproduksi dalam bentuk apapun tanpa izin tertulis sebelumnya.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

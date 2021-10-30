@@ -1,0 +1,131 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-red: #e72128;
+    --color-orange: #ff8700;
+    --color-text: #363232;
+    --color-surface: #f8f8f8;
+    --color-border: #ececec;
+    --color-mitra: #c4c4c433;
+    --hover-red: #dd170f;
+    --hover-orange: #cc6c00;
+    --hover-text: #1c1a1a;
+    --hover-border: #d3d3d3;
+    --hover-surface: #dfdfdf;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-color-red {
+    background-color: var(--color-red);
+}
+
+.text-color-red {
+    color: var(--color-red);
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.banner {
+    border-bottom: 26px solid var(--color-red);
+}
+
+.banner-image {
+    height: 400px;
+    object-fit: cover;
+    object-position: -45px;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    /* text-2xl text-center font-bold uppercase */
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-red);
+}
+
+#about, #services, #mitra, #contact {
+    scroll-margin-top: 10rem;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    top: 154px;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background-color: var(--color-red);
+    z-index: -1;
+}
+
+.card {
+    border-radius: 30px 30px 0 0;
+    max-width: 300px;
+}
+
+.card .card-body {
+    display: grid;
+    grid-template-rows: 72px 90px;
+    border-bottom: 2px solid var(--color-red);
+}
+
+.mitra {
+    background-color: var(--color-mitra);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-red);
+    border-radius: 50px;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+.icon:hover {
+    background-color: var(--color-black);
+    color: var(--color-red);
+}
+
+/* 'sm': '640px', */
+@media (min-width: 640px) {
+}
+
+/* 'md': '768px', */
+@media (min-width: 768px) {
+    .banner-image {
+        height: unset;
+        object-fit: unset;
+        object-position: unset;
+    }
+}
+
+/* 'lg': '1024px', */
+@media (min-width: 1024px) {
+}
+
+/* 'xl': '1280px', */
+@media (min-width: 1280px) {
+}
+
+/* '2xl': '1536px', */
+@media (min-width: 1536px) {
+}
